@@ -1,6 +1,13 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './style/Header.css'
 import Logo from '../assets/logo.webp'
 import Relogio from './Relogio'
+import Home from '../pages/Home'
+import Sobre from '../pages/Sobre'
+import Contatos from '../pages/Contatos'
+
+
+
 export default function Header(){
     const nome_do_site = "Site React"
     return(
@@ -11,12 +18,15 @@ export default function Header(){
                 {nome_do_site}
             </h1>
 
-            <nav className="menu">
-                <a href="#">link1</a>
-                <a href="#">link2</a>
-                <a href="#">link3</a>
-                <a href="#">link4</a>
-            </nav>
+            <div>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path='/' element={<Home/>}></Route>
+                        <Route path='/sobre' element={<Sobre/>}></Route>
+                        <Route path='/contato' element={<Contatos/>}></Route>
+                    </Routes>
+                </BrowserRouter>
+            </div>
         </header>
     )
 }

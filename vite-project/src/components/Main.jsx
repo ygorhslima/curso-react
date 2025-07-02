@@ -1,10 +1,12 @@
+import { useState } from 'react'
+import './style/main.css'
+
 import Dados from './Dados'
 import Numero from './Numero'
 import Led from './Led'
+import Titulo from './Titulo'
 
-import './style/main.css'
 
-import { useState } from 'react'
 export default function Main(){
 
     /**criando um estilo */
@@ -38,6 +40,11 @@ export default function Main(){
             <Numero num={num} setNum={setNum}/>
             <Led ligado={ligado} setLigado={setLigado}/>
 
+
+            <Titulo cor="#a0f" />
+            <Titulo cor="#9a6" />
+            <Titulo cor="#f54" />
+            <Titulo cor="#4f3" />
 
 
         </main>
