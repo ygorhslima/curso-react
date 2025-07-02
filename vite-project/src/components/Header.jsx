@@ -1,11 +1,11 @@
 import './style/Header.css'
 import Logo from '../assets/logo.webp'
-
+import Relogio from './Relogio'
 export default function Header(){
     const nome_do_site = "Site React"
     return(
         <header>
-            
+            <Relogio></Relogio>
             <h1>
                 <img src={Logo} alt="" width={70}/>
                 {nome_do_site}
